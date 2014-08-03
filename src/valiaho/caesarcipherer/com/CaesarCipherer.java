@@ -7,16 +7,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuBar;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.CompareGenerator;
-
 import net.miginfocom.swing.MigLayout;
 
-public class CaesarCipherer {
+public class CaesarCipherer extends JFrame{
 
 	private JFrame frmCaesarsCipher;
 	private JTextArea txtrEnterYourCipher;
@@ -51,8 +50,8 @@ public class CaesarCipherer {
 		ICiphererRelated DeciphererCase = new DecipheringActionObject();
 		ICiphererRelated CiphererCase = new CipherActionObject();
 		frmCaesarsCipher = new JFrame();
-		frmCaesarsCipher.setTitle("Caesar's Cipher");
-		frmCaesarsCipher.setBounds(100, 100, 962, 574);
+		frmCaesarsCipher.setTitle("Caesar Cipherer");
+		frmCaesarsCipher.setBounds(100, 100, 972, 581);
 		frmCaesarsCipher.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmCaesarsCipher.getContentPane().setLayout(new MigLayout("", "[67.00,grow][][][][][][][161.00][147.00][145.00,grow]", "[46.00][][grow][][][44.00,grow][][][][]"));
 		
@@ -100,6 +99,21 @@ public class CaesarCipherer {
 		});
 		frmCaesarsCipher.getContentPane().add(btnNewButton_1, "cell 9 2,growx,aligny center");
 		frmCaesarsCipher.getContentPane().add(lblNewLabel, "cell 9 0,aligny top");
+		
+		JMenuBar menuBar = new JMenuBar();
+		frmCaesarsCipher.setJMenuBar(menuBar);
+		
+		JButton btnNewButton_3 = new JButton("Vigernere");
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				frmCaesarsCipher.dispose();
+				VigernereCipherer vigernereFrame = new VigernereCipherer();
+				
+
+			}
+		});
+		menuBar.add(btnNewButton_3);
+		frmCaesarsCipher.setVisible(true);
 	}
 
 }
