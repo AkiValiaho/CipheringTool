@@ -1,5 +1,7 @@
 package valiaho.caesarcipherer.com;
 
+import java.util.Iterator;
+
 import javax.swing.JTextArea;
 
 public class VigernereCipherActionObject implements ICiphererRelated {
@@ -37,7 +39,7 @@ public class VigernereCipherActionObject implements ICiphererRelated {
 	@Override
 	public void cipher(JTextArea txtrEnterYourCipher) {
 		// TODO Auto-generated method stub
-		//First lets build a matching lenght keyword
+		//First lets build a matching length keyword
 		StringBuilder keyWordMatchedToPlainTextSize = new StringBuilder();
 		int localPosition = 0;
 		for (CharacterIterator iterator = new CharacterIterator(plainText); iterator.hasNext();) {
@@ -49,9 +51,21 @@ public class VigernereCipherActionObject implements ICiphererRelated {
 			localPosition+=1;
 			iterator.next();
 		}
-		
-		
-		
+		//Allright, time to do the caesar shifts
+		StringBuilder cipheredString = new StringBuilder();
+		for (CharacterIterator iterator = new CharacterIterator(plainText); iterator.hasNext();) {
+			Character currentChar = Character.toUpperCase(iterator.getCurrent());
+			if (currentChar + (keyWordMatchedToPlainTextSize.charAt(iterator.getPosition())-64) > 90) {
+				cipheredString.append((char)(currentChar+(keyWordMatchedToPlainTextSize.charAt(iterator.getPosition()))-90));
+			}
+			else {
+				cipheredString.append((char)(currentChar + (keyWordMatchedToPlainTextSize.charAt(iterator.getPosition())-64)));
+			}
+
+			iterator.next();
+			
+		}
+		txtrEnterYourCipher.setText(cipheredString.toString());
 	}
 
 	@Override
