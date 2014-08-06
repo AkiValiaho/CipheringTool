@@ -2,15 +2,15 @@ package valiaho.caesarcipherer.com;
 
 import javax.swing.JTextArea;
 
-public class CipherActionObject implements ICiphererRelated {
+public class CaesarCipherActionObject implements ICiphererRelated {
 	private String plainText;
 	private Integer numberOfShifts;
-	public CipherActionObject(String shitToCipher, Integer numberOfShifts) {
+	public CaesarCipherActionObject(String shitToCipher, Integer numberOfShifts) {
 		plainText = shitToCipher;
 		this.numberOfShifts = numberOfShifts;
 	}
 	
-	public CipherActionObject() {
+	public CaesarCipherActionObject() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -64,6 +64,12 @@ public class CipherActionObject implements ICiphererRelated {
 
 	@Override
 	public void decipher(JTextArea txtrEnterYourPlainText,JTextArea txtrEnterYoutCipher) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setPossibleKeyword(String keyword) {
 		// TODO Auto-generated method stub
 		
 	}

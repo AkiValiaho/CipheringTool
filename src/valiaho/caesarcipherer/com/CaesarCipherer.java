@@ -47,8 +47,8 @@ public class CaesarCipherer extends JFrame{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		ICiphererRelated DeciphererCase = new DecipheringActionObject();
-		ICiphererRelated CiphererCase = new CipherActionObject();
+		ICiphererRelated DeciphererCase = new CaesarDecipheringActionObject();
+		ICiphererRelated CiphererCase = new CaesarCipherActionObject();
 		frmCaesarsCipher = new JFrame();
 		frmCaesarsCipher.setTitle("Caesar Cipherer");
 		frmCaesarsCipher.setBounds(100, 100, 972, 581);
@@ -108,8 +108,6 @@ public class CaesarCipherer extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				frmCaesarsCipher.dispose();
 				VigernereCipherer vigernereFrame = new VigernereCipherer();
-				
-
 			}
 		});
 		menuBar.add(btnNewButton_3);

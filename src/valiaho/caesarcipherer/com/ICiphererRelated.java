@@ -15,5 +15,7 @@ public interface ICiphererRelated {
 	 */
 	public abstract void cipher(JTextArea txtrEnterYourCipher);
 	public abstract void decipher(JTextArea txtrEnterYourPlainText, JTextArea txtrEnterYourPlain);
+	public abstract void setPossibleKeyword(String keyword);
+	
 
 }

@@ -2,11 +2,16 @@ package valiaho.caesarcipherer.com;
 
 import javax.swing.JTextArea;
 
-public class DecipheringActionObject implements ICiphererRelated {
+/**
+ * @author Aki
+ * This class contains necessary methods implemented from ICiphererRelated interface to deciphering
+ * 
+ */
+public class CaesarDecipheringActionObject implements ICiphererRelated {
 	private String cipherText;
 	private Integer numberOfShifts;
 	
-	public DecipheringActionObject() {
+	public CaesarDecipheringActionObject() {
 		
 	}
 	@Override
@@ -53,4 +58,9 @@ public class DecipheringActionObject implements ICiphererRelated {
 			}
 			realArea.setText(decipheredText.toString()); 
 		}
+	@Override
+	public void setPossibleKeyword(String keyword) {
+		// TODO Auto-generated method stub
+		
+	}
 	}
