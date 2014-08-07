@@ -89,7 +89,10 @@ public class VigernereCipherer extends JFrame{
 		JButton btnNewButton_1 = new JButton("Decipher");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+				ICiphererRelated vigenereDecipherCAse = new VigernereDecipherActionObject();
+				vigenereDecipherCAse.setPossibleKeyword(textField.getText());
+				vigenereDecipherCAse.setCipherText(textArea_1.getText());
+				vigenereDecipherCAse.decipher(textArea_1,textAreaPlainText);
 			}
 		});
 		frmVigernereCipherer.getContentPane().add(btnNewButton_1, "cell 1 3,aligny bottom");

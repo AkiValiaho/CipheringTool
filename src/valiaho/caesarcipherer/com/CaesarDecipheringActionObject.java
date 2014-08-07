@@ -63,4 +63,9 @@ public class CaesarDecipheringActionObject implements ICiphererRelated {
 		// TODO Auto-generated method stub
 		
 	}
+	@Override
+	public void setCipherText(String cipherText) {
+		// TODO Auto-generated method stub
+		
+	}
 	}

@@ -1,7 +1,5 @@
 package valiaho.caesarcipherer.com;
 
-import java.util.Iterator;
-
 import javax.swing.JTextArea;
 
 public class VigernereCipherActionObject implements ICiphererRelated {
@@ -80,6 +78,12 @@ public class VigernereCipherActionObject implements ICiphererRelated {
 	public void setPossibleKeyword(String keyword) {
 		// TODO Auto-generated method stub
 		this.keyWord = keyword.toUpperCase();
+	}
+
+	@Override
+	public void setCipherText(String cipherText) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
