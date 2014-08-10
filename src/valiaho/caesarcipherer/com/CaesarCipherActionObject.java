@@ -10,6 +10,9 @@ public class CaesarCipherActionObject implements ICiphererRelated {
 		this.numberOfShifts = numberOfShifts;
 	}
 	
+	/**
+	 * 
+	 */
 	public CaesarCipherActionObject() {
 		// TODO Auto-generated constructor stub
 	}
